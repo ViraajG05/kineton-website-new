@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="home" className="relative overflow-hidden bg-white dark:bg-black min-h-screen">
+      <section id="home" className="top-28 relative overflow-hidden bg-white dark:bg-black min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 -top-20 h-screen flex justify-center items-center w-full pointer-events-none z-0">
           <Image
