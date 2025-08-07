@@ -5,33 +5,34 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-white dark:bg-black">
       <Header />
 
       {/* Hero Section */}
-      <section id="home" className="relative overflow-hidden bg-black h-screen">
+      <section id="home" className="relative overflow-hidden bg-white dark:bg-black min-h-screen">
         {/* Background Image */}
-        <div className="absolute right-0 top-0 w-2/3 h-full -mt-12">
+        <div className="absolute inset-0 -top-20 h-screen flex justify-center items-center w-full pointer-events-none z-0">
           <Image
-            src="/backimg.png"
+            src="/bgimg.png"
             alt="Background"
-            width={1200}
-            height={900}
-            className="object-cover w-full h-full opacity-95 object-top"
+            width={800}
+            height={600}
+            className="object-cover h-full w-full opacity-90"
+            style={{ objectPosition: 'center center' }}
             priority
           />
         </div>
         
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid lg:grid-cols-2 gap-12 items-center h-[calc(100vh-8rem)]">
-            {/* Left Side - Text Content */}
-            <div className="text-left">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                INTELLIGENT<br />
-                <span className="text-blue-400">COMPUTING</span><br />
+                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 lg:py-12">
+          <div className="flex flex-col items-center justify-start min-h-[calc(100vh-8rem)] pt-8">
+            {/* Centered Text Content */}
+            <div className="text-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-black dark:text-white mb-4 sm:mb-6 leading-tight">
+                INTELLIGENT
+                <span className="text-blue-600 dark:text-blue-400">COMPUTING</span><br />
                 INFRASTRUCTURE
               </h1>
-              <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
                 POWERING AI FROM FRAGMENTED HARDWARE TO FLUID INTELLIGENCE
               </p>
             </div>
@@ -41,169 +42,225 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white dark:bg-gray-900">
+      <section id="about" className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-8 sm:mb-12 tracking-wider text-blue-900 dark:bg-gradient-to-r dark:from-blue-400 dark:via-blue-300 dark:to-blue-200 dark:bg-clip-text dark:text-transparent drop-shadow-[0_0_15px_rgba(37,99,235,0.3)] dark:drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">
               About Us
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              We are passionate about creating exceptional digital experiences that 
-              inspire and engage users across the web.
-            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Fast Performance</h3>
-              <p className="text-gray-600 dark:text-gray-300">Lightning-fast loading times and smooth interactions.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Beautiful Design</h3>
-              <p className="text-gray-600 dark:text-gray-300">Modern, responsive design that looks great on all devices.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Secure & Reliable</h3>
-              <p className="text-gray-600 dark:text-gray-300">Built with security and reliability in mind.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Our Services
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              We offer a comprehensive range of services to help your business grow.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Web Development',
-                description: 'Custom websites and web applications built with modern technologies.',
-                icon: '💻'
-              },
-              {
-                title: 'Mobile Apps',
-                description: 'Native and cross-platform mobile applications for iOS and Android.',
-                icon: '📱'
-              },
-              {
-                title: 'UI/UX Design',
-                description: 'Beautiful and intuitive user interfaces that enhance user experience.',
-                icon: '🎨'
-              },
-              {
-                title: 'Digital Marketing',
-                description: 'Strategic digital marketing solutions to grow your online presence.',
-                icon: '📈'
-              },
-              {
-                title: 'Cloud Solutions',
-                description: 'Scalable cloud infrastructure and deployment solutions.',
-                icon: '☁️'
-              },
-              {
-                title: 'Consulting',
-                description: 'Expert advice and guidance for your digital transformation journey.',
-                icon: '🤝'
-              }
-            ].map((service, index) => (
-              <div key={index} className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Get In Touch
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Ready to start your next project? Let's discuss how we can help you achieve your goals.
-            </p>
-          </div>
-          <div className="max-w-2xl mx-auto">
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="John"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Doe"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="john@example.com"
+          <div className="grid md:grid-cols-3 gap-8 sm:gap-12 relative">
+            {/* Vertical Lines */}
+            <div className="hidden md:block absolute left-1/3 top-0 bottom-0 w-px bg-yellow-400 transform -translate-x-1/2"></div>
+            <div className="hidden md:block absolute right-1/3 top-0 bottom-0 w-px bg-yellow-400 transform translate-x-1/2"></div>
+            
+            {/* Our Vision */}
+            <div className="text-center">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+                <Image
+                  src="/ourvision.png"
+                  alt="Our Vision"
+                  width={128}
+                  height={128}
+                  className="rounded-lg object-cover w-full h-full"
                 />
               </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your project..."
-                ></textarea>
+              <h3 className="text-xl sm:text-2xl font-bold text-blue-900 dark:text-white mb-3 sm:mb-4">Our Vision</h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 text-left leading-relaxed">
+                We envision a world where any device can be instantly intelligent. Kineton ensures seamless interaction and integration between hardware and intelligence—enabling AI to run anywhere, instantly.
+              </p>
+            </div>
+            
+            {/* Our Mission */}
+            <div className="text-center">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+                <Image
+                  src="/our mission.png"
+                  alt="Our Mission"
+                  width={80}
+                  height={80}
+                  className="rounded-lg object-cover w-full h-full"
+                />
               </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-500 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
+              <h3 className="text-xl sm:text-2xl font-bold text-blue-900 dark:text-white mb-3 sm:mb-4">Our Mission</h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 text-left leading-relaxed">
+                We bridge the gap between fragmented hardware and scalable AI, creating intelligent infrastructure powering the next generation of autonomous robotics, drones, XR, wearables, and edge devices.
+              </p>
+            </div>
+            
+            {/* Our Approach */}
+            <div className="text-center">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+                <Image
+                  src="/ourapproach.png"
+                  alt="Our Approach"
+                  width={80}
+                  height={80}
+                  className="rounded-lg object-cover w-full h-full"
+                />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-blue-900 dark:text-white mb-3 sm:mb-4">Our Approach</h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 text-left leading-relaxed">
+                AI rests on four pillars: Data, Architecture, Infrastructure, Energy. While the focus remains on data and architecture, Kineton builds infrastructure to run, adapt, and scale intelligence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Customers Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-black relative overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <video
+            src="/aivid.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+        
+        {/* Content Overlay */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-8 sm:mb-12 tracking-wider bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+              OUR CUSTOMERS
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {/* AI-First Product Companies */}
+            <div className="bg-blue-900/40 backdrop-blur-md p-6 sm:p-8 rounded-lg border border-blue-400/30">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">AI-First Product Companies</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                Companies where AI is the core of their product—not just a feature. They need infrastructure that natively understands AI from runtime to orchestration.
+              </p>
+            </div>
+            
+            {/* Original Equipment Manufacturers (OEMs) */}
+            <div className="bg-blue-900/40 backdrop-blur-md p-6 sm:p-8 rounded-lg border border-blue-400/30">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">Original Equipment Manufacturers (OEMs)</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                Companies building smart, autonomous systems—drones, vehicles, robots—where everything runs in constrained, connected, real-world environments.
+              </p>
+            </div>
+            
+            {/* System Integrators and Computing Centers */}
+            <div className="bg-blue-900/40 backdrop-blur-md p-6 sm:p-8 rounded-lg border border-blue-400/30 sm:col-span-2 lg:col-span-1">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">System Integrators and Computing Centers</h3>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                Organizations that design and deploy intelligent compute infrastructure for enterprises across cloud, on-premises, and edge environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Kineton Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-8 sm:mb-12 tracking-wider text-blue-900 dark:bg-gradient-to-r dark:from-blue-400 dark:via-blue-300 dark:to-blue-200 dark:bg-clip-text dark:text-transparent drop-shadow-[0_0_15px_rgba(37,99,235,0.3)] dark:drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+              WHY KINETON ?
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mb-12 sm:mb-16 items-center">
+            {/* Less Bulk, More Intelligence */}
+            <div className="order-2 lg:order-1">
+              <h3 className="text-2xl sm:text-3xl font-bold text-blue-900 dark:text-white mb-6 sm:mb-8">Less Bulk, More Intelligence</h3>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                While the world builds AI systems that deploy everything—bloated models, generic infrastructure, full cloud stacks—chasing generalization, we focus only on what's needed for execution, precision, and control.
+              </p>
+            </div>
+            
+            {/* Cube Image */}
+            <div className="flex justify-center order-1 lg:order-2">
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
+                <Image
+                  src="/cube.png"
+                  alt="3D Cube"
+                  width={320}
+                  height={320}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+            {/* AI Image */}
+            <div className="flex justify-center">
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
+                <Image
+                  src="/ai.png"
+                  alt="AI Technology"
+                  width={320}
+                  height={320}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            {/* AI is Foundational */}
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-blue-900 dark:text-white mb-6 sm:mb-8">AI is Foundational, Infrastructure is the Bottleneck</h3>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                AI rests on four core pillars: Data, Architecture, Infrastructure, Energy. While the world focuses on architecture and data, the real bottleneck lies in the execution layer. Kineton builds infrastructure that builds, runs, adapts, and scales intelligence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Makes Us Different Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
+            {/* Left Side - Heading */}
+            <div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-blue-900 dark:text-white mb-6 sm:mb-8">
+                What makes us different?
+              </h2>
+            </div>
+
+            {/* Right Side - Features List */}
+            <div className="space-y-4 sm:space-y-6">
+              {[
+                {
+                  title: "Vertically Integrated Stack",
+                  description: "From semiconductor cores to orchestration—everything designed to work together"
+                },
+                {
+                  title: "AI-Native by Design",
+                  description: "Built specifically for intelligent workloads, not adapted from legacy systems"
+                },
+                {
+                  title: "Edge-Ready Performance",
+                  description: "Low-latency, power-efficient operation where it matters most"
+                },
+                {
+                  title: "Real-Time Orchestration",
+                  description: "Dynamic coordination across cloud, edge, and swarm environments"
+                },
+                {
+                  title: "Future-Proof Architecture",
+                  description: "Ready for the next generation of autonomous and agentic systems"
+                }
+              ].map((feature, index) => (
+                <div key={index} className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 mt-1">
+                    <div className="w-full h-full bg-blue-600 dark:bg-blue-400 transform rotate-45" style={{ boxShadow: '0 0 10px #2563EB' }}></div>
+                  </div>
+                  <div>
+                    <h3 className="text-base sm:text-lg font-semibold text-blue-900 dark:text-white mb-1 sm:mb-2">{feature.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
