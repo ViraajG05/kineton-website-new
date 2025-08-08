@@ -21,7 +21,7 @@ export default function Header() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-5">
             <Link href="#home" className="nav-item">Home</Link>
-            <Link href="#products" className="nav-item">Product</Link>
+            <Link href="/products" className="nav-item">Product</Link>
             <Link href="/solutions" className="nav-item">Solution</Link>
             <Link href="#contact" className="nav-item">Contact</Link>
 

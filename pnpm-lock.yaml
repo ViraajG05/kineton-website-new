@@ -21,38 +21,41 @@ importers:
         specifier: 14.0.4
         version: 14.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
-        specifier: ^18
+        specifier: ^18.3.0
         version: 18.3.1
       react-dom:
-        specifier: ^18
+        specifier: ^18.3.0
         version: 18.3.1(react@18.3.1)
+      split-type:
+        specifier: ^0.3.4
+        version: 0.3.4
     devDependencies:
       '@types/node':
-        specifier: ^20
+        specifier: ^20.9.0
         version: 20.19.9
       '@types/react':
-        specifier: ^18
+        specifier: ^18.3.3
         version: 18.3.23
       '@types/react-dom':
-        specifier: ^18
+        specifier: ^18.3.3
         version: 18.3.7(@types/react@18.3.23)
       autoprefixer:
-        specifier: ^10.0.1
+        specifier: ^10.4.14
         version: 10.4.21(postcss@8.5.6)
       eslint:
-        specifier: ^8
+        specifier: ^8.56.0
         version: 8.57.1
       eslint-config-next:
         specifier: 14.0.4
         version: 14.0.4(eslint@8.57.1)(typescript@5.9.2)
       postcss:
-        specifier: ^8
+        specifier: ^8.4.38
         version: 8.5.6
       tailwindcss:
-        specifier: ^3.3.0
+        specifier: ^3.3.5
         version: 3.4.17
       typescript:
-        specifier: ^5
+        specifier: ^5.4.5
         version: 5.9.2
 
 packages:
@@ -1550,6 +1553,9 @@ packages:
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
+
+  split-type@0.3.4:
+    resolution: {integrity: sha512-otEk9vnD8qwfLsk3Lx0gz+qRkNIJCx0mlyL47ImP/DjMuV39d75Lpfwjn9fHteDRz0aoOblSzQjSNT9+Sswxcg==}
 
   stable-hash@0.0.5:
     resolution: {integrity: sha512-+L3ccpzibovGXFK+Ap/f8LOS0ahMrHTf3xu7mMLSpEGU0EO9ucaysSylKo9eRDFNhWve/y275iPmIZ4z39a9iA==}
@@ -3435,6 +3441,8 @@ snapshots:
   slash@3.0.0: {}
 
   source-map-js@1.2.1: {}
+
+  split-type@0.3.4: {}
 
   stable-hash@0.0.5: {}
 

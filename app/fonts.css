@@ -1,0 +1,14 @@
+/* fonts.css */
+
+/* Import Roboto and Figtree from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Roboto:wght@400;700;900&display=swap');
+
+/* Roboto font for titles */
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Figtree font for descriptions */
+.figtree {
+  font-family: 'Figtree', sans-serif;
+}
