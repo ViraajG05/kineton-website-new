@@ -28,7 +28,7 @@ export default function Header() {
             <button className="btn-primary">Join the Waitlist →</button>
             <button className="btn-outline">Sign Up</button>
 
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Toggle */}
@@ -60,7 +60,7 @@ export default function Header() {
             <button className="btn-outline w-full">Sign Up</button>
 
             <div className="flex justify-center">
-              {/* <ThemeToggle /> */}
+              <ThemeToggle />
             </div>
           </div>
         )}

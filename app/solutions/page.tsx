@@ -15,7 +15,6 @@ export default function SolutionsPage() {
           <CategorySection
             key={i}
             section={section.section}
-            subheading={section.subheading}
             cards={section.cards}
           />
         ))}
