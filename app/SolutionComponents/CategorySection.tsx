@@ -7,11 +7,9 @@ import { useRef, useEffect } from "react";
 
 export default function CategorySection({
   section,
-  subheading,
   cards,
 }: {
   section: string;
-  subheading: string;
   cards: { icon: string; title: string; desc: string }[];
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -53,7 +51,6 @@ export default function CategorySection({
       >
         <div className="max-w-6xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4 font-primary">{section}</h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto font-secondary">{subheading}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
