@@ -7,9 +7,9 @@ export default function Hero() {
     <div className="relative w-full min-h-[100vh] overflow-hidden flex items-center justify-center bg-black">
 
       {/* Gradient Background */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#a68c2d] via-[#000000] to-[#004aad]">
+      {/* <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#a68c2d] via-[#000000] to-[#004aad]">
         <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-black/30 backdrop-blur-sm pointer-events-none" />
-      </div>
+      </div> */}
 
       {/* Bg */}
       {/* <div
@@ -20,13 +20,13 @@ export default function Hero() {
       </div> */}
 
       {/* Overlay gradient */}
-      {/* <div
+      <div
         className="absolute inset-0 z-0 bg-cover  bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/solutionsBg.png')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#004aad]/60 via-black/50 to-[#a68c2d]/60" />
         <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-black/30 backdrop-blur-sm pointer-events-none" />
-      </div> */}
+      </div>
 
 
 
