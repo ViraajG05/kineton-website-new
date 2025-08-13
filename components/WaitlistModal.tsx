@@ -117,7 +117,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                 required
                 value={formData.fullName}
                 onChange={(e) => handleInputChange('fullName', e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/50 text-white placeholder-white/60 transition-all duration-200"
+                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-0 focus:border-white/50 transition-all duration-200"
                 placeholder="Enter your full name"
               />
             </div>
@@ -132,7 +132,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                 required
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/50 text-white placeholder-white/60 transition-all duration-200"
+                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-0 focus:border-white/50 transition-all duration-200"
                 placeholder="Enter your email address"
               />
             </div>
@@ -146,7 +146,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                 type="text"
                 value={formData.company}
                 onChange={(e) => handleInputChange('company', e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/50 text-white placeholder-white/60 transition-all duration-200"
+                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-0 focus:border-white/50 transition-all duration-200"
                 placeholder="Enter your company or organisation"
               />
             </div>
@@ -160,7 +160,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                 type="text"
                 value={formData.designation}
                 onChange={(e) => handleInputChange('designation', e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/50 text-white placeholder-white/60 transition-all duration-200"
+                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-0 focus:border-white/50 transition-all duration-200"
                 placeholder="Enter your designation or role"
               />
             </div>
@@ -173,7 +173,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
               <textarea
                 value={formData.systemType}
                 onChange={(e) => handleInputChange('systemType', e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/50 text-white placeholder-white/60 transition-all duration-200"
+                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-0 focus:border-white/50 transition-all duration-200"
                 rows={3}
                 placeholder="e.g., autonomous robots, drones, edge AI devices, AI workloads on on-prem clusters, etc."
               />
@@ -187,7 +187,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
               <textarea
                 value={formData.challenges}
                 onChange={(e) => handleInputChange('challenges', e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/50 text-white placeholder-white/60 transition-all duration-200"
+                className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-0 focus:border-white/50 transition-all duration-200"
                 rows={3}
                 placeholder="e.g., runtime inefficiency, orchestration complexity, latency, scaling, memory limits, edge deployment issues"
               />
