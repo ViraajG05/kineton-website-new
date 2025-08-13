@@ -15,7 +15,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image src="/Logo.png" alt="Kineton Logo" width={36} height={36} />
-            {/* <span className="text-lg font-semibold text-gray-900 dark:text-white">Kineton</span> */}
+            { <span className="text-lg font-semibold text-gray-900 dark:text-white">Kineton</span> }
           </Link>
 
           {/* Desktop Nav */}
