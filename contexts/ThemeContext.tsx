@@ -12,26 +12,23 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light')
+  const [theme, setTheme] = useState<Theme>('dark')
 
   useEffect(() => {
-    // Check for saved theme preference or default to device preference
-    const savedTheme = localStorage.getItem('theme') as Theme
-    const deviceTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    
-    setTheme(savedTheme || deviceTheme)
+    // Always set dark theme
+    setTheme('dark')
   }, [])
 
   useEffect(() => {
-    // Apply theme to document
+    // Apply dark theme to document
     const root = window.document.documentElement
     root.classList.remove('light', 'dark')
-    root.classList.add(theme)
-    localStorage.setItem('theme', theme)
+    root.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
   }, [theme])
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light')
+    // No-op function since we only want dark theme
   }
 
   return (

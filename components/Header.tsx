@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import ThemeToggle from './ThemeToggle'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -27,8 +26,6 @@ export default function Header() {
 
             <button className="btn-primary">Join the Waitlist →</button>
             <Link href="/signup" className="btn-outline">Sign Up</Link>
-
-            <ThemeToggle />
           </div>
 
           {/* Mobile Toggle */}
@@ -58,10 +55,6 @@ export default function Header() {
 
             <button className="btn-primary bg-primary w-full">Join the Waitlist</button>
             <Link href="/signup" className="btn-outline w-full">Sign Up</Link>
-
-            <div className="flex justify-center">
-              <ThemeToggle />
-            </div>
           </div>
         )}
       </div>
