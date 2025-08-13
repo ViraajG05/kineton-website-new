@@ -3,12 +3,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import WaitlistModal from './WaitlistModal'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false)
 
   return (
-    <nav className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[98%] z-50 bg-white/60 dark:bg-[#0e0e0e]/60 backdrop-blur-md backdrop-saturate-150 border border-gray-200/40 dark:border-white/10 rounded-[10px] shadow-md transition-all duration-300 font-secondary text-lg">
+    <>
+      <nav className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[98%] z-50 bg-white/60 dark:bg-[#0e0e0e]/60 backdrop-blur-md backdrop-saturate-150 border border-gray-200/40 dark:border-white/10 rounded-[10px] shadow-md transition-all duration-300 font-secondary text-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -24,7 +27,12 @@ export default function Header() {
             <Link href="/solutions" className="nav-item">Solution</Link>
             <Link href="/contact" className="nav-item">Contact</Link>
 
-            <button className="btn-primary">Join the Waitlist →</button>
+            <button 
+              onClick={() => setIsWaitlistModalOpen(true)}
+              className="btn-primary"
+            >
+              Join the Waitlist →
+            </button>
             <Link href="/signup" className="btn-outline">Sign Up</Link>
           </div>
 
@@ -53,11 +61,23 @@ export default function Header() {
             <Link href="/solutions" className="mobile-nav-item">Solution</Link>
             <Link href="#contact" className="mobile-nav-item">Contact</Link>
 
-            <button className="btn-primary bg-primary w-full">Join the Waitlist</button>
+            <button 
+              onClick={() => setIsWaitlistModalOpen(true)}
+              className="btn-primary bg-primary w-full"
+            >
+              Join the Waitlist
+            </button>
             <Link href="/signup" className="btn-outline w-full">Sign Up</Link>
           </div>
         )}
       </div>
     </nav>
+
+    {/* Waitlist Modal */}
+    <WaitlistModal 
+      isOpen={isWaitlistModalOpen}
+      onClose={() => setIsWaitlistModalOpen(false)}
+    />
+  </>
   )
 }
