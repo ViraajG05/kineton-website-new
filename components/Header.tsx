@@ -3,15 +3,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import { usePathname } from 'next/navigation'
-import ThemeToggle from './ThemeToggle'
+import WaitlistModal from './WaitlistModal'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pathname = usePathname()
-
-  // Helper to check if link is active
-  const isActive = (path: string) => pathname === path
+  const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false)
 
   return (
     <>
@@ -21,42 +17,23 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image src="/Logo.png" alt="Kineton Logo" width={36} height={36} />
-            <span className="text-lg font-semibold text-gray-900 dark:text-white">Kineton</span>
+            { <span className="text-lg font-semibold text-gray-900 dark:text-white">Kineton</span> }
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-5">
-            <Link
-              href="/"
-              className={`nav-item ${isActive('/') ? 'text-primary font-semibold border-b-2 border-primary' : ''}`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/products"
-              className={`nav-item ${isActive('/products') ? 'text-primary font-semibold border-b-2 border-primary' : ''}`}
-            >
-              Product
-            </Link>
-            <Link
-              href="/solutions"
-              className={`nav-item ${isActive('/solutions') ? 'text-primary font-semibold border-b-2 border-primary' : ''}`}
-            >
-              Solution
-            </Link>
-            <Link
-              href="#contact"
-              className={`nav-item ${pathname === '/#contact' ? 'text-primary font-semibold border-b-2 border-primary' : ''}`}
-            >
-              Contact
-            </Link>
+            <Link href="/" className="nav-item">Home</Link>
+            <Link href="/products" className="nav-item">Product</Link>
+            <Link href="/solutions" className="nav-item">Solution</Link>
+            <Link href="/contact" className="nav-item">Contact</Link>
 
-            <button className="btn-primary">Join the Waitlist →</button>
-            <Link href="/signup" className={`btn-outline ${isActive('/signup') ? 'border-primary text-primary font-semibold' : ''}`}>
-              Sign Up
-            </Link>
-
-            <ThemeToggle />
+            <button 
+              onClick={() => setIsWaitlistModalOpen(true)}
+              className="btn-primary"
+            >
+              Join the Waitlist →
+            </button>
+            <Link href="/signup" className="btn-outline">Sign Up</Link>
           </div>
 
           {/* Mobile Toggle */}
@@ -79,42 +56,18 @@ export default function Header() {
         {/* Mobile Nav */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 space-y-4 flex flex-col items-center">
-            <Link
-              href="/"
-              className={`mobile-nav-item ${isActive('/') ? 'text-primary font-semibold border-b-2 border-primary' : ''}`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/products"
-              className={`mobile-nav-item ${isActive('/products') ? 'text-primary font-semibold border-b-2 border-primary' : ''}`}
-            >
-              Product
-            </Link>
-            <Link
-              href="/solutions"
-              className={`mobile-nav-item ${isActive('/solutions') ? 'text-primary font-semibold border-b-2 border-primary' : ''}`}
-            >
-              Solution
-            </Link>
-            <Link
-              href="#contact"
-              className={`mobile-nav-item ${pathname === '/#contact' ? 'text-primary font-semibold border-b-2 border-primary' : ''}`}
-            >
-              Contact
-            </Link>
+            <Link href="/" className="mobile-nav-item">Home</Link>
+            <Link href="#products" className="mobile-nav-item">Product</Link>
+            <Link href="/solutions" className="mobile-nav-item">Solution</Link>
+            <Link href="#contact" className="mobile-nav-item">Contact</Link>
 
-            <button className="btn-primary bg-primary w-full">Join the Waitlist</button>
-            <Link
-              href="/signup"
-              className={`btn-outline w-full ${isActive('/signup') ? 'border-primary text-primary font-semibold' : ''}`}
+            <button 
+              onClick={() => setIsWaitlistModalOpen(true)}
+              className="btn-primary bg-primary w-full"
             >
-              Sign Up
-            </Link>
-
-            <div className="flex justify-center">
-              <ThemeToggle />
-            </div>
+              Join the Waitlist
+            </button>
+            <Link href="/signup" className="btn-outline w-full">Sign Up</Link>
           </div>
         )}
       </div>
