@@ -22,14 +22,14 @@ export default function Hero() {
       {/* Overlay gradient */}
       <div
         className="absolute inset-0 z-0 bg-cover  bg-[position_60%_center] bg-no-repeat"
-        style={{ backgroundImage: "url('/solutionsBg.png')" }}
+        style={{ backgroundImage: "url('/solutionsBg2.png')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#a68c2d]/60 via-black/50 to-[#004aad]/60" />
         {/* <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-black/30 backdrop-blur-sm pointer-events-none" /> */}
       </div>
 
       {/* Hero Content*/}
-      <section className="relative z-20 px-6 sm:px-12 py-20 w-full max-w-4xl text-center flex flex-col gap-14 font">
+      <section className="relative top-2 z-20 px-6 sm:px-12 py-20 w-full max-w-4xl text-center flex flex-col gap-14 font">
         <div className="top-32">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-text leading-tight font-primary">
             Pioneering Intelligent

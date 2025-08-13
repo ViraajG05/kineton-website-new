@@ -22,9 +22,9 @@ export default function Home() {
         {
           opacity: 1,
           y: 0,
-          duration: 0.9,
+          duration: 0.5,
           ease: "power3.out",
-          delay: index * 0.10, // slightly bigger stagger for smoother flow
+          delay: index * 0.05, // slightly bigger stagger for smoother flow
           scrollTrigger: {
             trigger: el,
             start: "top 90%",

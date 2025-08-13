@@ -12,7 +12,7 @@ export default function ProductsHero() {
         style={{ backgroundImage: "url('/products_landing.png')" }} // replace with your image path
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#a68c2d]/60 via-black/50 to-[#004aad]/60" />
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-black/30 backdrop-blur-sm pointer-events-none" />
+        {/* <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-black/30 backdrop-blur-sm pointer-events-none" /> */}
       </div>
 
       {/* Hero Content */}
