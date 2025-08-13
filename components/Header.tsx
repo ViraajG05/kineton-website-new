@@ -26,7 +26,7 @@ export default function Header() {
             <Link href="#contact" className="nav-item">Contact</Link>
 
             <button className="btn-primary">Join the Waitlist →</button>
-            <button className="btn-outline">Sign Up</button>
+            <Link href="/signup" className="btn-outline">Sign Up</Link>
 
             <ThemeToggle />
           </div>
@@ -57,7 +57,7 @@ export default function Header() {
             <Link href="#contact" className="mobile-nav-item">Contact</Link>
 
             <button className="btn-primary bg-primary w-full">Join the Waitlist</button>
-            <button className="btn-outline w-full">Sign Up</button>
+            <Link href="/signup" className="btn-outline w-full">Sign Up</Link>
 
             <div className="flex justify-center">
               <ThemeToggle />
