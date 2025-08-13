@@ -23,7 +23,7 @@ export default function Header() {
             <Link href="/" className="nav-item">Home</Link>
             <Link href="/products" className="nav-item">Product</Link>
             <Link href="/solutions" className="nav-item">Solution</Link>
-            <Link href="#contact" className="nav-item">Contact</Link>
+            <Link href="/contact" className="nav-item">Contact</Link>
 
             <button className="btn-primary">Join the Waitlist →</button>
             <Link href="/signup" className="btn-outline">Sign Up</Link>
