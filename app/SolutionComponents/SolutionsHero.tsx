@@ -21,11 +21,11 @@ export default function Hero() {
 
       {/* Overlay gradient */}
       <div
-        className="absolute inset-0 z-0 bg-cover  bg-center bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover  bg-[position_60%_center] bg-no-repeat"
         style={{ backgroundImage: "url('/solutionsBg.png')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#a68c2d]/60 via-black/50 to-[#004aad]/60" />
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-black/30 backdrop-blur-sm pointer-events-none" />
+        {/* <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-black/30 backdrop-blur-sm pointer-events-none" /> */}
       </div>
 
       {/* Hero Content*/}
