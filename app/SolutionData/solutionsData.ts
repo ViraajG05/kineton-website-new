@@ -1,7 +1,6 @@
 export const solutionsData = [
     {
         section: "What we Enable",
-        subheading: "Laying the Applicational Foundation for a Smarter, Faster Future",
         cards: [
             { icon: "mdi:cloud-cog", title: "Edge Computing", desc: "Local, efficient AI processing for environments with resource or power limits." },
             { icon: "material-symbols:network-intel-node", title: "Distributed AI", desc: "Unified orchestration across diverse devices and locations." },
@@ -14,7 +13,6 @@ export const solutionsData = [
     },
     {
         section: "Industries We Power",
-        subheading: "Transforming Vision into Impact Across various Domains",
         cards: [
             { icon: "mdi:robot-outline", title: "Robotics", desc: "Ultra-low latency AI for real-time control and multi-robot coordination." },
             { icon: "mdi:car-electric-outline", title: "Autonomous Vehicles", desc: "High-performance silicon and intelligent networking for safety-critical navigation." },
@@ -26,7 +24,6 @@ export const solutionsData = [
     },
     {
         section: "What we Solve",
-        subheading: "Overcoming Critical Barriers to Scalable AI Deployment",
         cards: [
             { icon: "mdi:memory", title: "Memory Wall", desc: "Minimize data movement, maximize compute efficiency." },
             { icon: "material-symbols:thunderstorm-outline", title: "Power Constraints", desc: "Deliver high performance within strict energy and thermal limits." },

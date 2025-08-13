@@ -29,7 +29,7 @@ export default function Home() {
             <div className="text-center">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-black dark:text-white mb-4 sm:mb-6 leading-tight">
                 INTELLIGENT
-                <span className="text-blue-600 dark:text-blue-400">COMPUTING</span><br />
+                <span className="text-blue-600 dark:text-blue-400"> COMPUTING</span><br />
                 INFRASTRUCTURE
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
